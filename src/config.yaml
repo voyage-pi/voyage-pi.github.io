@@ -1,6 +1,6 @@
 site:
   name: Voyage
-  site: 'https://voyage-pi.github.io'
+  site: 'https://voyage.github.io'
   base: '/'
   trailingSlash: false
 
