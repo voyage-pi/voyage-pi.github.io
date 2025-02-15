@@ -1,7 +1,7 @@
 site:
   name: Voyage
   site: 'https://voyage-pi.github.io'
-  base: 'voyage-pi.github.io'
+  base: '/'
   trailingSlash: false
 
   googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
