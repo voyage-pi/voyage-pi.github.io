@@ -11,7 +11,10 @@ export const headerData = {
       href: '#',
     },
   ],
-  actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
+  actions: [{ text: ' GitHub', href: 'https://github.com/voyage-pi/voyage-pi.github.io', target: '_blank' },
+            { text: 'Google Drive', href: 'https://drive.google.com/drive/folders/158ntRnDcMAbc8rKsSLTjUmcLhjGvtPnE?usp=sharing', target: '_blank' },
+            { text: 'Jira', href: 'https://voyagepi.atlassian.net/jira/software/projects/VP/boards/1', target: '_blank' }],
+
 };
 
 export const footerData = {
