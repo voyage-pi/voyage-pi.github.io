@@ -174,6 +174,17 @@ export const findLatestPosts = async ({ count }: { count?: number }): Promise<Ar
 };
 
 /** */
+export const findOldestPosts = async ({ count }: { count?: number }): Promise<Array<Post>> => {
+  const _count = count || 4;
+  const posts = await fetchPosts();
+
+  return posts 
+    ? posts.sort((a, b) => new Date(a.publishDate).getTime() - new Date(b.publishDate).getTime()).slice(0, _count) 
+    : [];
+};
+
+
+/** */
 export const getStaticPathsBlogList = async ({ paginate }: { paginate: PaginateFunction }) => {
   if (!isBlogEnabled || !isBlogListRouteEnabled) return [];
   return paginate(await fetchPosts(), {
