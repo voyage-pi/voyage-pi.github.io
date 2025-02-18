@@ -1,4 +1,4 @@
-import { z, defineCollection } from 'astro:content';
+import { defineCollection, z  } from 'astro:content';
 import { glob } from 'astro/loaders';
 
 const metadataDefinition = () =>
@@ -65,6 +65,16 @@ const postCollection = defineCollection({
   }),
 });
 
+const meetingsCollection = defineCollection({
+  loader: glob({ pattern: ['*.md', '*.mdx'], base: 'src/data/meetings' }),
+  schema: z.object({
+    title: z.string(),
+    date: z.date(),
+    participants: z.string(),
+  }),
+});
+
 export const collections = {
   post: postCollection,
+  meetings: meetingsCollection,
 };

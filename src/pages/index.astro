@@ -4,6 +4,8 @@ import Layout from '~/layouts/PageLayout.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import Features from '~/components/widgets/Features.astro';
 import BlogOldestPosts from '~/components/widgets/BlogOldestPosts.astro';
+import Team from '~/components/widgets/Team.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
 
 const metadata = {
   title: 'Voyage',
@@ -32,12 +34,12 @@ const metadata = {
     </Fragment>
   </Hero2>
 
+  <HeroText title="Say Bon Voyage to Planning" />
 
 
   <Features
     id="features"
-    tagline="Features"
-    title="Say Bon Voyage to Planning"
+    title="Features"
     items={[
       {
         title: 'Provide personally tailored activity recommendations',
@@ -62,9 +64,7 @@ const metadata = {
     ]}
   />
 
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
+  <Team />
 
 
   <BlogOldestPosts
