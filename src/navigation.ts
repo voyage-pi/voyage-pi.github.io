@@ -35,11 +35,41 @@ export const footerData = {
     {
       title: 'Team Members',
       links: [
-        { text: 'Guilherme Rosa', href: '#' },
-        { text: 'Henrique Freitas', href: '#' },
-        { text: 'Henrique Teixeira', href: '#' },
-        { text: 'João Roldão', href: '#' },
-        { text: 'Rui Machado', href: '#' },
+        {
+          text: 'Guilherme Rosa',
+          href: '#',
+          linkedin: 'https://www.linkedin.com/in/guilherme-rosa',
+          github: 'https://github.com/guilherme-rosa',
+          email: 'mailto:guilherme.rosa@example.com'
+        },
+        {
+          text: 'Henrique Freitas',
+          href: '#',
+          linkedin: 'https://www.linkedin.com/in/henrique-freitas',
+          github: 'https://github.com/henrique-freitas',
+          email: 'mailto:henrique.freitas@example.com'
+        },
+        {
+          text: 'Henrique Teixeira',
+          href: '#',
+          linkedin: 'https://www.linkedin.com/in/henrique-teixeira',
+          github: 'https://github.com/henrique-teixeira',
+          email: 'mailto:henrique.teixeira@example.com'
+        },
+        {
+          text: 'João Roldão',
+          href: '#',
+          linkedin: 'https://www.linkedin.com/in/joao-roldao',
+          github: 'https://github.com/joao-roldao',
+          email: 'mailto:joao.roldao@example.com'
+        },
+        {
+          text: 'Rui Machado',
+          href: '#',
+          linkedin: 'https://www.linkedin.com/in/rui-machado',
+          github: 'https://github.com/rui-machado',
+          email: 'mailto:rui.machado@example.com'
+        }
       ],
     },
     {
@@ -55,7 +85,6 @@ export const footerData = {
     { text: 'Meetings', href: getPermalink('/meetings') },
     { text: 'GitHub', href: 'https://github.com/voyage-pi' },
     { text: 'Google Drive', href: 'https://drive.google.com/drive/folders/158ntRnDcMAbc8rKsSLTjUmcLhjGvtPnE?usp=sharing' }
-
   ],
   socialLinks: [
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/voyage-pi' },
