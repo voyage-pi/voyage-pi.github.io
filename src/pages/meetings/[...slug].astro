@@ -1,9 +1,19 @@
 ---
-import { getCollection, getEntryBySlug } from 'astro:content';
+import { getCollection, getEntry } from 'astro:content';
 import Layout from '~/layouts/PageLayout.astro';
 
+export async function getStaticPaths() {
+  const meetings = await getCollection('meetings');
+
+  return meetings.map((meeting) => ({
+    params: { slug: meeting.id }, // ✅ Use meeting.id as the slug
+  }));
+}
+
 const { slug } = Astro.params;
-const meeting = await getEntryBySlug('meetings', slug);
+
+// ✅ Fetch the correct meeting entry
+const meeting = await getEntry('meetings', slug);
 
 if (!meeting) {
   throw new Error(`Meeting not found: ${slug}`);
@@ -16,7 +26,7 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <article class="max-w-4xl mx-auto p-6 bg-gray-900 text-white rounded-lg">
-    <h1 class="text-3xl font-bold">title</h1>
+    <h1 class="text-3xl font-bold">{metadata.title}</h1>
     <p class="text-sm opacity-75">{new Date(meeting.data.date).toLocaleDateString()}</p>
     <div class="mt-4 prose prose-invert" set:html={meeting.body} />
     <a href="/meetings" class="text-blue-400 hover:underline mt-6 block">← Back to Meetings</a>

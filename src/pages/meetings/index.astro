@@ -7,10 +7,10 @@ const metadata = {
   title: 'Meetings',
 };
 
-// Fetch meetings collection correctly
+// ✅ Fetch meetings collection correctly
 const meetings = await getCollection('meetings');
 
-// Sort by date (newest first)
+// ✅ Sort by date (newest first)
 meetings.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 ---
 
@@ -24,7 +24,7 @@ meetings.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
           <h2 class="text-xl font-semibold">{meeting.data.title}</h2>
           <p class="text-sm opacity-75">{new Date(meeting.data.date).toLocaleDateString()}</p>
           <p class="mt-2">Participants: {meeting.data.participants}</p>
-          <a href={`/meetings/${meeting.slug}`} class="text-blue-400 hover:underline">Read more →</a>
+          <a href={`/meetings/${meeting.id}`} class="text-blue-400 hover:underline">Read more →</a> <!-- ✅ Use meeting.id -->
         </li>
       ))}
     </ul>
