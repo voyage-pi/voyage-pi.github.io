@@ -1,4 +1,10 @@
 ---
+import RuiImg from "../../assets/images/rui.png";
+import GuiImg from "../../assets/images/gui.png";
+import RicImg from "../../assets/images/ric.png";
+import FreitasImg from "../../assets/images/freitas.png";
+import RoldaoImg from "../../assets/images/roldao.png";
+
 interface TeamMember {
     name: string;
     role1: string;
@@ -12,72 +18,86 @@ interface TeamMember {
       name: "Guilherme Rosa",
       role1: "Role1",
       role2: "Developer",
-      image: "",
-      gradientClass: "from-yellow-400 to-orange-500"
+      image: GuiImg,
+      gradientClass: "bg-gradient-to-t from-[#d91e48] to-rose-200"
     },
     {
       name: "Henrique Freitas",
-      role1: "Role2",
+      role1: "Role1",
       role2: "Developer",
-      image: "",
-      gradientClass: "from-orange-400 to-red-500"
+      image: FreitasImg,
+      gradientClass: "bg-gradient-to-t from-[#d91e48] to-rose-200"
     },
     {
       name: "Henrique Teixeira",
-      role1: "Role3",
+      role1: "Role1",
       role2: "Developer",
-      image: "",
-      gradientClass: "from-red-500 to-pink-600"
+      image: RicImg,
+      gradientClass: "bg-gradient-to-t from-[#d91e48] to-rose-200"
     },
     {
       name: "João Roldão",
       role1: "Role1",
       role2: "Developer",
-      image: "",
-      gradientClass: "from-pink-600 to-purple-600"
+      image: RoldaoImg,
+      gradientClass: "bg-gradient-to-t from-[#d91e48] to-rose-200"
     },
     {
       name: "Rui Machado",
-      role1: "role1",
+      role1: "Role1",
       role2: "Developer",
-      image: "",
-      gradientClass: "from-purple-600 to-blue-600"
+      image: RuiImg,
+      gradientClass: "bg-gradient-to-t from-[#d91e48] to-rose-200"
     }
   ];
+
+const {
+  title = "Team", 
+  information = await Astro.slots.render('information'),
+  id,
+  isDark = false,
+  classes = {},
+  bg = await Astro.slots.render('bg'),
+} = Astro.props;
 ---
 
-  <section class="py-16 px-8 max-w-7xl mx-auto">
-    <div class="grid grid-cols md:grid-cols-2 lg:grid-cols-5 gap-8">
-      {team.map((member) => (
-        <div class="relative group">
-          <div class={`relative overflow-hidden rounded-md aspect-[5/6] bg-[#fe385c]`}>
-            <img
-              src={member.image.src}
-              alt={`${member.name} - ${member.role1}`}
-              class="w-full h-full object-cover"
-            />
-          </div>
-          <div class="bg-white rounded-2xl p-3 mt-[-2rem] mx-4 relative shadow-lg text-center">
-            <h3 class="text-md font-medium text-gray-900 mb-1">
-              {member.name}
-            </h3>
-            <p class="text-gray-600 text-sm">
-              {member.role1} | {member.role2}
-            </p>
-            
-          </div>
+<section class="py-16 px-8 max-w-7xl mx-auto">
+  {title && (
+    <h1 class="text-4xl font-bold  mb-8" set:html={title} />
+  )}
+
+  {information && <p class="text-center text-gray-600 mb-12" set:html={information} />}
+
+  <div class="grid grid-cols md:grid-cols-2 lg:grid-cols-5 gap-8">
+    {team.map((member) => (
+      <div class="relative group">
+        <div class={`relative overflow-hidden rounded-md aspect-[5/6] bg-gradient-to-br ${member.gradientClass}`}>
+          <img
+            src={member.image.src}
+            alt={`${member.name} - ${member.role1}`}
+            class="w-full h-full object-cover"
+          />
         </div>
-      ))}
-    </div>
-  </section>
-  
-  <style>
-    .group:hover img {
-      transform: scale(1.05);
-      transition: transform 0.3s ease-in-out;
-    }
-    
-    img {
-      transition: transform 0.3s ease-in-out;
-    }
-  </style>
+        <div class="bg-white rounded-2xl p-3 mt-[-2rem] mx-4 relative shadow-lg text-center">
+          <h3 class="text-md font-medium text-gray-900 mb-1">
+            {member.name}
+          </h3>
+          <p class="text-gray-600 text-sm">
+            {member.role1} | {member.role2}
+          </p>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .group:hover img {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  img {
+    transition: transform 0.3s ease-in-out;
+  }
+</style>
