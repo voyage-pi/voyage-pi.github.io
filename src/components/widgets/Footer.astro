@@ -1,11 +1,15 @@
 ---
 import Logo from '../Logo.astro';
+import LogoIcon from '../../assets/images/voyage-logo.png';
 
 interface Link {
   text?: string;
   href?: string;
   ariaLabel?: string;
   icon?: string;
+  linkedin?: string;
+  github?: string;
+  email?: string;
 }
 
 interface Links {
@@ -37,15 +41,38 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
               <div class="dark:text-gray-300 font-medium mb-2">{title}</div>
               {links && Array.isArray(links) && links.length > 0 && (
                 <ul class="text-sm">
-                  {links.map(({ text, href, ariaLabel }) => (
+                  {links.map(({ text, href, ariaLabel, linkedin, github, email }) => (
                     <li class="mb-2">
-                      <a
-                        class="text-muted hover:text-gray-700 hover:underline dark:text-gray-400 transition duration-150 ease-in-out"
-                        href={href}
-                        aria-label={ariaLabel}
-                      >
-                        <Fragment set:html={text} />
-                      </a>
+                      <span>{text}</span>
+                      {linkedin && (
+                        <a
+                          href={linkedin}
+                          aria-label={`${text} LinkedIn`}
+                          class="ml-2 text-muted hover:text-gray-700 dark:text-gray-400 transition duration-150 ease-in-out"
+                        >
+                          <i class="tabler:brand-linkedin"></i>
+                        </a>
+                      )}
+                      {github && (
+                        <a
+                          href={github}
+                          aria-label={`${text} GitHub`}
+                          class="ml-2 text-muted hover:text-gray-700 dark:text-gray-400 transition duration-150 ease-in-out"
+                        >
+                          <i class="tabler:brand-github"></i>
+                        </a>
+                        
+                      )}
+                      {email && (
+                        <a
+                          href={email}
+                          aria-label={`${text} Email`}
+                          class="ml-2 text-muted hover:text-gray-700 dark:text-gray-400 transition duration-150 ease-in-out"
+                        >
+                          <i class="tabler:mail"></i>
+                          
+                        </a>
+                      )}
                     </li>
                   ))}
                 </ul>
@@ -56,9 +83,10 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
       </div>
 
       <div class="w-full md:w-1/4 flex justify-end">
-        <Logo class="w-48 md:w-56 lg:w-72 h-auto" />
+        <div class="w-48 md:w-56 lg:w-64 h-auto">
+          <img src={LogoIcon.src || "/placeholder.svg"} alt="Voyage Logo" />
+        </div>
       </div>
     </div>
   </div>
 </footer>
-
