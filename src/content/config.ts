@@ -69,7 +69,7 @@ const meetingsCollection = defineCollection({
   loader: glob({ pattern: ['*.md', '*.mdx'], base: 'src/data/meetings' }),
   schema: z.object({
     title: z.string(),
-    date: z.date(),
+    date: z.coerce.date(),
     participants: z.string(),
   }),
 });
