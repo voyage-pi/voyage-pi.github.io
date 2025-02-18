@@ -1,23 +1,24 @@
 ---
-import { getCollection, getEntry } from 'astro:content';
+import { getCollection, getEntry, render } from 'astro:content';
 import Layout from '~/layouts/PageLayout.astro';
 
 export async function getStaticPaths() {
   const meetings = await getCollection('meetings');
 
   return meetings.map((meeting) => ({
-    params: { slug: meeting.id }, // ✅ Use meeting.id as the slug
+    params: { slug: meeting.id },
   }));
 }
 
 const { slug } = Astro.params;
 
-// ✅ Fetch the correct meeting entry
 const meeting = await getEntry('meetings', slug);
 
 if (!meeting) {
   throw new Error(`Meeting not found: ${slug}`);
 }
+
+const {Content} = await render (meeting);
 
 const metadata = {
   title: meeting.data.title,
@@ -25,10 +26,23 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <article class="max-w-4xl mx-auto p-6 bg-gray-900 text-white rounded-lg">
-    <h1 class="text-3xl font-bold">{metadata.title}</h1>
-    <p class="text-sm opacity-75">{new Date(meeting.data.date).toLocaleDateString()}</p>
-    <div class="mt-4 prose prose-invert" set:html={meeting.body} />
-    <a href="/meetings" class="text-blue-400 hover:underline mt-6 block">← Back to Meetings</a>
-  </article>
+  <section class="max-w-4xl mx-auto mt-8 p-6 bg-muted/80 dark:bg-muted/90 rounded-2xl transition-all">
+    <h1 class="text-3xl font-bold text-default">{meeting.data.title}</h1>
+    <p class="text-sm text-muted-foreground mt-1">
+      {new Date(meeting.data.date).toLocaleDateString()}
+    </p>
+
+    <p class="mt-4 text-muted-foreground">
+      <strong>Participants:</strong> {meeting.data.participants}
+    </p>
+
+    <div class="mx-auto px-6 sm:px-6 max-w-3xl prose prose-md lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg mt-8 prose-headings:scroll-mt-[80px] prose-li:my-0"    >
+      <Content />
+    </div>
+
+    <a href="/meetings" 
+       class="text-primary hover:text-primary-dark transition-all duration-300 block mt-6 font-medium">
+      ← Back to Meetings
+    </a>
+  </section>
 </Layout>
