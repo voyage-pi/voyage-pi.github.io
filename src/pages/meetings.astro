@@ -1,0 +1,32 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+
+const metadata = {
+  title: 'Meetings',
+};
+
+// Fetch meetings collection correctly
+const meetings = await getCollection('meetings');
+
+// Sort by date (newest first)
+meetings.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+---
+
+<Layout metadata={metadata}>
+  <HeroText title="Meetings" />
+
+  <section class="max-w-4xl mx-auto mt-8">
+    <ul class="space-y-6">
+      {meetings.map((meeting) => (
+        <li class="border p-4 rounded-lg bg-gray-800 text-white">
+          <h2 class="text-xl font-semibold">{meeting.data.title}</h2>
+          <p class="text-sm opacity-75">{new Date(meeting.data.date).toLocaleDateString()}</p>
+          <p class="mt-2">Participants: {meeting.data.participants}</p>
+          <a href={`/meetings/${meeting.slug}`} class="text-blue-400 hover:underline">Read more →</a>
+        </li>
+      ))}
+    </ul>
+  </section>
+</Layout>

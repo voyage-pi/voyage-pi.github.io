@@ -4,21 +4,21 @@ export const headerData = {
   links: [
     {
       text: 'Milestones',
-      href: '#',
+      href: '/blog',
     },
     {
       text: 'Calendar',
-      href: '#',
+      href: '/calendar',
     },
     {
       text: 'Meetings',
-      href: '#',
+      href: '/meetings',
     },
     
   ],
   actions: [{ text: ' GitHub', href: 'https://github.com/voyage-pi/voyage-pi.github.io', target: '_blank', icon: 'tabler:brand-github' },
             { text: 'Google Drive', href: 'https://drive.google.com/drive/folders/158ntRnDcMAbc8rKsSLTjUmcLhjGvtPnE?usp=sharing', target: '_blank', icon: 'tabler:brand-google-drive' },
-            { text: 'Jira', href: 'https://voyagepi.atlassian.net/jira/software/projects/VP/boards/1', target: '_blank' , icon: 'tabler:brand-adobe' } ],
+            { text: 'Jira', href: 'https://voyage-pi.atlassian.net/jira/software/projects/VOYAGEPI/summary', target: '_blank' , icon: 'tabler:brand-adobe' } ],
 
 };
 
@@ -27,9 +27,9 @@ export const footerData = {
     {
       title: 'Resources',
       links: [
-        { text: 'GitHub', href: '#' },
-        { text: 'Google Drive', href: '#' },
-        { text: 'Jira', href: '#' },
+        { text: 'GitHub', href: 'https://github.com/voyage-pi/voyage-pi.github.io' },
+        { text: 'Google Drive', href: 'https://drive.google.com/drive/folders/158ntRnDcMAbc8rKsSLTjUmcLhjGvtPnE?usp=sharing' },
+        { text: 'Jira', href: 'https://voyage-pi.atlassian.net/jira/software/projects/VOYAGEPI/summary' },
       ],
     },
     {
