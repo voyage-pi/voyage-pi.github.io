@@ -1,19 +1,24 @@
-import { getPermalink, getAsset } from './utils/permalinks';
+import { getPermalink } from './utils/permalinks';
 
 export const headerData = {
   links: [
     {
-      text: 'Features',
+      text: 'Milestones',
       href: '#',
     },
     {
-      text: 'Deliveries',
+      text: 'Calendar',
       href: '#',
     },
+    {
+      text: 'Meetings',
+      href: '#',
+    },
+    
   ],
-  actions: [{ text: ' GitHub', href: 'https://github.com/voyage-pi/voyage-pi.github.io', target: '_blank' },
-            { text: 'Google Drive', href: 'https://drive.google.com/drive/folders/158ntRnDcMAbc8rKsSLTjUmcLhjGvtPnE?usp=sharing', target: '_blank' },
-            { text: 'Jira', href: 'https://voyagepi.atlassian.net/jira/software/projects/VP/boards/1', target: '_blank' }],
+  actions: [{ text: ' GitHub', href: 'https://github.com/voyage-pi/voyage-pi.github.io', target: '_blank', icon: 'tabler:brand-github' },
+            { text: 'Google Drive', href: 'https://drive.google.com/drive/folders/158ntRnDcMAbc8rKsSLTjUmcLhjGvtPnE?usp=sharing', target: '_blank', icon: 'tabler:brand-google-drive' },
+            { text: 'Jira', href: 'https://voyagepi.atlassian.net/jira/software/projects/VP/boards/1', target: '_blank' , icon: 'tabler:brand-adobe' } ],
 
 };
 
