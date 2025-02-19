@@ -15,17 +15,13 @@ meetings.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 <Layout metadata={metadata}>
   <HeroText title="Meetings" />
 
-  <section class="max-w-6xl mx-auto mt-8">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  <section class="max-w-6xl mx-auto m-9">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       {meetings.map((meeting) => (
-        <div class="bg-muted/80 hover:bg-muted/90 p-6 rounded-2xl transition-all duration-300">
-          <h2 class="text-xl font-semibold text-default">{meeting.data.title}</h2>
-          <p class="text-sm opacity-75">{new Date(meeting.data.date).toLocaleDateString()}</p>
-          <a href={`/meetings/${meeting.id}`} 
-             class="text-primary hover:text-primary-dark transition-all duration-300 block mt-3 font-medium">
-            Read more →
-          </a>
-        </div>
+        <a href={`/meetings/${meeting.id}`} class="hover:shadow-primary shadow-sm bg-muted/80 hover:bg-muted/90 p-6 py-8 rounded-2xl transition-all duration-300 border border-gray">
+          <h2 class="text-2xl font-semibold text-default text-center">{meeting.data.title}</h2>
+          <p class="text-sm opacity-75 text-center">{new Date(meeting.data.date).toLocaleDateString()}</p>
+        </a>
       ))}
     </div>
   </section>
