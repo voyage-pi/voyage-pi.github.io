@@ -55,5 +55,5 @@ Discussão sobre as principais funcionalidades que impactam o planejamento e o c
 •⁠  ⁠Avaliação da viabilidade da integração com Google Calendar e perfis sociais.  
 
 ---  
-*📅 Próxima Reunião:* [Data prevista]  
+*📅 Próxima Reunião:*  19/02/2025  
 

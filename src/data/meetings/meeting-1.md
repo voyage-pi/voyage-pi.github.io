@@ -48,5 +48,5 @@ Definir as principais tarefas e objetivos para o desenvolvimento do projeto de v
 •⁠  ⁠Discussão sobre como melhorar a interação e o tempo de planejamento da viagem, com foco em simplificar o processo de orçamento.
 
 ---  
-*📅 Próxima Reunião:* [Data prevista]
+*📅 Próxima Reunião:* 17/02/2025
 

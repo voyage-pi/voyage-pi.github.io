@@ -50,5 +50,5 @@ participants: Guilherme Rosa, Henrique Freitas, Henrique Teixeira, João Roldão
 •⁠  ⁠Alinhamento sobre o que será feito na **M2 - Elaboration Phase**.  
 
 ---  
-*📅 Próxima Reunião:* [Data prevista]  
+*📅 Próxima Reunião:* 20/02/2025 
 
