@@ -75,7 +75,7 @@ export const footerData = {
     {
       title: 'Project Advisors',
       links: [
-        { text: 'Dr. Osvaldo Pacheco', href: 'https://www.ua.pt/pt/p/10313442' },
+        { text: 'Osvaldo Pacheco', href: 'https://www.ua.pt/pt/p/10313442' },
         { text: 'Daniel Ferreira', href: 'https://www.ua.pt/pt/p/80653922' }
       ],
     }

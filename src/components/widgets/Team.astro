@@ -7,8 +7,6 @@ import RoldaoImg from "../../assets/images/roldao.png";
 
 interface TeamMember {
     name: string;
-    role1: string;
-    role2: string;
     image: ImageMetadata;
     gradientClass: string;
   }
@@ -16,36 +14,26 @@ interface TeamMember {
   const team: TeamMember[] = [
     {
       name: "Guilherme Rosa",
-      role1: "Role1",
-      role2: "Developer",
       image: GuiImg,
       gradientClass: "bg-gradient-to-t from-[#d91e48] to-rose-200"
     },
     {
       name: "Henrique Freitas",
-      role1: "Role1",
-      role2: "Developer",
       image: FreitasImg,
       gradientClass: "bg-gradient-to-t from-[#d91e48] to-rose-200"
     },
     {
       name: "Henrique Teixeira",
-      role1: "Role1",
-      role2: "Developer",
       image: RicImg,
       gradientClass: "bg-gradient-to-t from-[#d91e48] to-rose-200"
     },
     {
       name: "João Roldão",
-      role1: "Role1",
-      role2: "Developer",
       image: RoldaoImg,
       gradientClass: "bg-gradient-to-t from-[#d91e48] to-rose-200"
     },
     {
       name: "Rui Machado",
-      role1: "Role1",
-      role2: "Developer",
       image: RuiImg,
       gradientClass: "bg-gradient-to-t from-[#d91e48] to-rose-200"
     }
@@ -74,17 +62,14 @@ const {
         <div class={`relative overflow-hidden rounded-md aspect-[5/6] bg-gradient-to-br ${member.gradientClass}`}>
           <img
             src={member.image.src}
-            alt={`${member.name} - ${member.role1}`}
+            alt={`${member.name}`}
             class="w-full h-full object-cover"
           />
         </div>
-        <div class="bg-white rounded-2xl p-3 mt-[-2rem] mx-4 relative shadow-lg text-center">
+        <div class="bg-white rounded-2xl p-3 mt-[-2rem] mx-4 relative text-center shadow-md">
           <h3 class="text-md font-medium text-gray-900 mb-1">
             {member.name}
           </h3>
-          <p class="text-gray-600 text-sm">
-            {member.role1} | {member.role2}
-          </p>
         </div>
       </div>
     ))}
