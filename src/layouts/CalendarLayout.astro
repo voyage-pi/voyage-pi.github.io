@@ -1,17 +1,11 @@
 ---
-const {frontmatter} = Astro.props
 import HeroText from '~/components/widgets/HeroText.astro';
 import Layout from '~/layouts/PageLayout.astro';
+const {title} = Astro.props;
 ---
 <Layout>
-    <HeroText title={frontmatter.title} />
-    <div id="wrapper" class="text-center justify-center p-8">
-        <slot/>
-    </div>
+  <HeroText title={title} />
+  <div id="wrapper" class="text-center justify-center p-8">
+    <slot/>
+  </div>
 </Layout>
-
-<style>
-    #wrapper > p:first-child{
-        max-width: none;
-    }
-</style>
