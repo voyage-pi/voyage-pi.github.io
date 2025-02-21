@@ -48,7 +48,6 @@ const {
   bg = await Astro.slots.render('bg'),
 } = Astro.props;
 ---
-
 <section class="py-16 px-8 max-w-7xl mx-auto">
   {title && (
     <h1 class="text-4xl font-bold  mb-8" set:html={title} />
