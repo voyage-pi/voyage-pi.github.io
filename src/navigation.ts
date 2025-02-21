@@ -27,7 +27,7 @@ export const footerData = {
     {
       title: 'Resources',
       links: [
-        { text: 'GitHub', href: 'https://github.com/voyage-pi/voyage-pi.github.io' },
+        { text: 'GitHub', href: 'https://github.com/voyage-pi' },
         { text: 'Google Drive', href: 'https://drive.google.com/drive/folders/158ntRnDcMAbc8rKsSLTjUmcLhjGvtPnE?usp=sharing' },
         { text: 'Jira', href: 'https://voyage-pi.atlassian.net/jira/software/projects/VOYAGEPI/summary' },
       ],
@@ -37,38 +37,23 @@ export const footerData = {
       links: [
         {
           text: 'Guilherme Rosa',
-          href: '#',
-          linkedin: 'https://www.linkedin.com/in/guilherme-rosa',
-          github: 'https://github.com/guilherme-rosa',
-          email: 'mailto:guilherme.rosa@example.com'
+          href: 'https://github.com/guilherme096',
         },
         {
           text: 'Henrique Freitas',
-          href: '#',
-          linkedin: 'https://www.linkedin.com/in/henrique-freitas',
-          github: 'https://github.com/henrique-freitas',
-          email: 'mailto:henrique.freitas@example.com'
+          href: 'https://github.com/HenriqueFreitas07',
         },
         {
           text: 'Henrique Teixeira',
-          href: '#',
-          linkedin: 'https://www.linkedin.com/in/henrique-teixeira',
-          github: 'https://github.com/henrique-teixeira',
-          email: 'mailto:henrique.teixeira@example.com'
+          href: 'https://github.com/henriqueft04',
         },
         {
           text: 'João Roldão',
-          href: '#',
-          linkedin: 'https://www.linkedin.com/in/joao-roldao',
-          github: 'https://github.com/joao-roldao',
-          email: 'mailto:joao.roldao@example.com'
+          href: 'https://github.com/roldao04',
         },
         {
           text: 'Rui Machado',
-          href: '#',
-          linkedin: 'https://www.linkedin.com/in/rui-machado',
-          github: 'https://github.com/rui-machado',
-          email: 'mailto:rui.machado@example.com'
+          href: 'https://github.com/ruimachado23',
         }
       ],
     },
