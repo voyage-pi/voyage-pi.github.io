@@ -1,17 +1,15 @@
 ---
-const {frontmatter} = Astro.props
-import HeroText from '~/components/widgets/HeroText.astro';
 import Layout from '~/layouts/PageLayout.astro';
+const {title} = Astro.props;
 ---
 <Layout>
-    <HeroText title={frontmatter.title} />
+  <div class="text-center max-w-5xl mx-auto">
+    <h1
+    class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
+    set:html={title}
+  />
+    </div>
     <div id="wrapper" class="text-center justify-center p-8">
-        <slot/>
+      <slot/>
     </div>
 </Layout>
-
-<style>
-    #wrapper > p:first-child{
-        max-width: none;
-    }
-</style>
