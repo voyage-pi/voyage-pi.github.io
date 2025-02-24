@@ -2,51 +2,64 @@
 id: 1
 title: 📝 Meeting 1
 date: 2025-02-13
-participants: Guilherme Rosa, Henrique Freitas, Henrique Teixeira, João Roldão, Rui Machado
 ---
-📅 Data:13-02-2025 
-📍 Local/Plataforma: MakerLab/Presencial 
-👥 Participantes:
-- Henrique Teixeira  
-- Henrique Freitas  
-- Rui Machado  
-- Guilherme Rosa  
-- João Roldão  
+📅 Date: 13-02-2025
 
-## 1. 🎯 Objetivo da Reunião  
-Definir as principais tarefas e objetivos para o desenvolvimento do projeto de viagem personalizada, incluindo identidade visual, planejamento de funcionalidades e tarefas de desenvolvimento.
+📍 Place / Platform: MakerLab / In-person
 
-## 2. 💬 Discussões e Decisões  
-### *Tópico 1:* **Identidade Visual**  
-- Definido o slogan: _"Voyage, a trip made for you"_  
-- Frase promocional: _"Say Bon Voyage to Planning"_  
-- Atribuídas as tarefas para o plano de identidade visual:  
-  - **Logos, cores, fontes** - Rui  
-  - **Template de PowerPoint** - Teixeira  
-  - **Site em Astro setup** - Guilherme Rosa  
-  - **Fill in Astro Site** - João Roldão  
+👥 Participants
 
-### *Tópico 2:* **Problema e Solução**  
-•⁠  ⁠O problema identificado é que os viajantes frequentemente enfrentam dificuldades para planejar viagens personalizadas devido à falta de conhecimento local, à quantidade de opções e à dificuldade em encontrar atividades alinhadas com suas preferências.  
-•⁠  ⁠A solução será uma aplicação que gera itinerários personalizados com base nas preferências do usuário, incluindo acomodações, refeições e atividades.  
+- Guilherme Rosa
+- Henrique Freitas
+- Henrique Teixeira
+- João Roldão
+- Rui Machado
 
-### *Tópico 3:* **Comparação com Concorrência**  
-•⁠  ⁠Tabela de análise de concorrentes (Layla AI, Wonderplan, Mindtrip) discutida. A aplicação proposta terá vantagens em oferecer um perfil de preferências completo, questionários e funcionalidades para definir zonas de interesse.  
-•⁠  ⁠Guilherme Rosa ficará responsável pela tabela "Related Work and Forms".
+---
 
-### *Tópico 4:* **Formulários**  
-•⁠  ⁠Henrique Freitas será responsável pela criação dos formulários necessários para a aplicação.  
+## 1. 🎯 Meeting Objective
 
-### *Tópico 5:* **Funcionalidades e Arquitetura**  
-•⁠  ⁠A aplicação terá os seguintes módulos principais:  
-  - **Módulo de Recomendações**  
-  - **Módulo de Itinerários**  
-•⁠  ⁠A tarefa de definir esses módulos foi atribuída a João Roldão.  
+Define the main tasks and objectives for the development of the personalized travel project, including visual identity, functionality planning, and development tasks.
 
-## 3. 📝 Observações e Comentários  
-•⁠  ⁠É importante alinhar com a equipe as expectativas para as funcionalidades principais, como a personalização de itinerários e recomendações, e definir claramente os objetivos de usabilidade e experiência do usuário.  
-•⁠  ⁠Discussão sobre como melhorar a interação e o tempo de planejamento da viagem, com foco em simplificar o processo de orçamento.
+## 2. 💬 Discussion and Decisions
 
----  
-*📅 Próxima Reunião:* 17/02/2025
+### *Topic 1:* **Visual Identity**
+
+- Slogan defined: *"Voyage, a trip made for you"*
+- Promotional phrase: *"Say Bon Voyage to Planning"*
+- Tasks assigned for the visual identity plan:
+    - **Logos, colors, fonts** - Rui
+    - **PowerPoint template** - Teixeira
+    - **Astro website setup** - Guilherme Rosa
+    - **Fill in Astro website** - João Roldão
+
+### *Topic 2:* **Problem and Solution**
+
+- The identified problem is that travelers often face difficulties in planning personalized trips due to a lack of local knowledge, an overwhelming number of options, and challenges in finding activities aligned with their preferences.
+- The solution will be an application that generates personalized itineraries based on user preferences, including accommodations, meals, and activities.
+
+### *Topic 3:* **Competitor Comparison**
+
+- Competitor analysis table (Layla AI, Wonderplan, Mindtrip) discussed. The proposed application will have advantages by offering a complete preference profile, questionnaires, and features to define areas of interest.
+- Guilherme Rosa will be responsible for the "Related Work and Forms" table.
+
+### *Topic 4:* **Forms**
+
+- Henrique Freitas will be responsible for creating the necessary forms for the application.
+
+### *Topic 5:* **Features and Architecture**
+
+- The application will have the following main modules:
+    - **Recommendation Module**
+    - **Itinerary Module**
+- The task of defining these modules was assigned to João Roldão.
+
+## 3. 📝 Observations and Comments
+
+- It is important to align team expectations regarding key functionalities, such as itinerary personalization and recommendations, and clearly define usability and user experience objectives.
+- Discussion on how to improve interaction and travel planning time, with a focus on simplifying the budgeting process.
+
+---
+
+📅 Next Meeting: 17-02-2025
 
