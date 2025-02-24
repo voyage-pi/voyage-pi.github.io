@@ -8,9 +8,8 @@ image: "https://raw.githubusercontent.com/voyage-pi/voyage-pi.github.io/c4278f2b
 
 ### Useful Links:
 
-- [Project Specification]("")
-- [Presentation]("")
-- [Calendar]("")
+- [Project Specification]("https://drive.google.com/file/d/1nK7XlZAsDgLFSjN2aXheFGKaIJo35WSg/view?usp=sharing")
+- [Presentation]("https://drive.google.com/file/d/1lBI_FNm6EyifWQNjonMYfSIt_BlSgYmB/view?usp=sharing")
 
 ### Problem
 
