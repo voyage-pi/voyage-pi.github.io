@@ -66,7 +66,6 @@ const meetingsCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     date: z.coerce.date(),
-    participants: z.string(),
   }),
 });
 

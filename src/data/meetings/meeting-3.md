@@ -2,53 +2,62 @@
 title: 📝 Meeting 3 
 id: 3
 date: 2025-02-19
-participants: Guilherme Rosa, Henrique Freitas, Henrique Teixeira, João Roldão, Rui Machado
+---
+📅 Date: 19/02/2025
+
+📍 Place / Platform: IEETA / In-person
+
+👥 Participants
+
+- Daniel Ferreira
+- Guilherme Rosa
+- Henrique Freitas
+- Henrique Teixeira
+- Rui Machado
+
 ---
 
+## 1. 🎯 Meeting Objective
 
-*📅 Data:* 19/02/2025  
-*📍 Local/Plataforma: IEETA/Presencial 
-*👥 Participantes:*  
-•⁠  ⁠Henrique Teixeira  
-•⁠  ⁠Henrique Freitas  
-•⁠  ⁠Rui Machado  
-•⁠  ⁠Guilherme Rosa  
-•⁠  ⁠João Roldão  
+- Collect feedback on the structure of the **M1** PowerPoint.
+- Presentation of the website and alignment of the next steps.
 
-## 1. 🎯 Objetivo da Reunião  
-•⁠  ⁠Recolher feedback sobre a estrutura do PowerPoint da **M1**.  
-•⁠  ⁠Apresentação do site e alinhamento das próximas etapas.  
+## 2. 💬 Discussion and Decisions
 
-## 2. 💬 Discussões e Decisões  
+### *Topic 1:* **M1 PowerPoint**
 
-### *Tópico 1:* **PowerPoint da M1**  
-•⁠  ⁠Revisão do conteúdo e estrutura.  
-•⁠  ⁠Ajustes necessários antes da apresentação.  
-•⁠  ⁠Decisão de fusão entre "Expected Results" e "Goals" com a frase **"Incorporate factors like..."**.  
-•⁠  ⁠Adicionar um bullet point para destacar o objetivo concreto do projeto.  
+- Review of content and structure.
+- Necessary adjustments before the presentation.
+- Decision to merge "Expected Results" and "Goals" with the phrase **"Incorporate factors like..."**.
+- Add a bullet point to highlight the concrete objective of the project.
 
-### *Tópico 2:* **Calendário e Planejamento**  
-•⁠  ⁠Alteração na estrutura do **Work Plan**:  
-  - Criar um **diagrama de Gantt** para inclusão no PowerPoint.  
-  - Modificar o conteúdo relacionado à **autenticação** no calendário.  
-  - Remover subtópicos do calendário.  
-  - Adicionar responsáveis às tarefas do calendário.  
+### *Topic 2:* **Schedule and Planning**
 
-### *Tópico 3:* **Apresentação do Site**  
-•⁠  ⁠Demonstração do estado atual do site.  
-•⁠  ⁠Feedback e ajustes a serem feitos.  
+- Changes to the **Work Plan** structure:
+    - Create a **Gantt diagram** to include in the PowerPoint.
+    - Modify content related to **authentication** in the schedule.
+    - Remove calendar subtasks.
+    - Assign responsible team members to schedule tasks.
 
-### *Tópico 4:* **Arquitetura do Projeto**  
-•⁠  ⁠Necessidade de ajustes na arquitetura.  
-•⁠  ⁠Transposição dos objetivos para um formato mais **conceitual**.  
+### *Topic 3:* **Website Presentation**
 
-### *Tópico 5:* **Google Forms e Diferenciais da Plataforma**  
-•⁠  ⁠Adicionar checkbox para **RJPD** no formulário.  
-•⁠  ⁠Incluir uma questão que destaque **as features da nossa plataforma que os concorrentes não têm**.  
+- Demonstration of the current state of the website.
+- Feedback and adjustments to be made.
 
-## 3. 📝 Observações e Comentários  
-•⁠  ⁠Alinhamento sobre o que será feito na **M2 - Elaboration Phase**.  
+### *Topic 4:* **Project Architecture**
 
----  
-*📅 Próxima Reunião:* 20/02/2025 
+- Need for adjustments in the architecture.
+- Transform objectives into a more **conceptual** format.
 
+### *Topic 5:* **Google Forms and Platform Differentiators**
+
+- Add a checkbox for **GDPR compliance** in the form.
+- Include a question highlighting **the features our platform offers that competitors do not**.
+
+## 3. 📝 Observations and Comments
+
+- Alignment on what will be done in **M2 - Elaboration Phase**.
+
+---
+
+📅 Next Meeting: 20/02/2025
