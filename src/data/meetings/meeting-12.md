@@ -6,9 +6,9 @@ date: 2025-03-03
 
 📅 Date: 04/03/2025  
 
-📍 Place / Platform: TBD  
+📍 Place / Platform: Discord  
 
-## 👥 Participants  
+👥 Participants  
 
 - Guilherme Rosa  
 - Henrique Freitas  
