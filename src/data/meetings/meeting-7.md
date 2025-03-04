@@ -53,6 +53,11 @@ date: 2025-02-24
 - **Roldão**: Upload meeting minutes
 - **Rui**: Finalize and upload milestone documentation
 
+## **Presentation Notes**
+- Increase letter size
+- Put scale of grading in Context part
+- Change order to Problem -> COntext -> Goals -> Related Work
+
 ---
 
 📅 Next Meeting: 25/02/2025
