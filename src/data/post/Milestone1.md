@@ -13,7 +13,7 @@ image: "https://raw.githubusercontent.com/voyage-pi/voyage-pi.github.io/c4278f2b
 
 ### Problem
 
-Travelers often struggle to plan personalized trips due to a lack of local knowledge, an overwhelming number of choices, and the challenge of finding and planing activities aligned with their preferences and time frames. 
+Travelers often struggle to plan personalized trips due to a lack of local knowledge, an overwhelming number of choices, and the challenge of finding and planing activities aligned with their preferences and time frames.
 
 - Planning an itinerary requires gathering details from multiple sources, making it hard to create a good travel plan;
 - Travel plans often don’t take into account external factors like weather, transportation and overall logistics leading to poor experiences;
