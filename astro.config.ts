@@ -14,7 +14,6 @@ import type { AstroIntegration } from 'astro';
 import astrowind from './vendor/integration';
 
 import { readingTimeRemarkPlugin, responsiveTablesRehypePlugin, lazyImagesRehypePlugin } from './src/utils/frontmatter';
-import staticAdapter from '@astrojs/static';
 
 import expressiveCode from 'astro-expressive-code';
 import remarkMermaid from 'remark-mermaidjs';
@@ -27,7 +26,6 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
 
 export default defineConfig({
   output: 'static',
-
 
   integrations: [tailwind({
     applyBaseStyles: false,

@@ -21,7 +21,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
 
       - name: Install Playwright
         run: |
@@ -31,25 +30,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Clean previous builds
-        run: rm -rf dist/ .astro/
-
       - name: Build project
         run: npm run build
 
-      - name: Sanitize build output
+      - name: Validate build output
         run: |
-          # Remove symlinks and problematic directories
-          rm -rf dist/.astro
-          find dist -type l -delete
-
-          # Flatten directory structure
-          mkdir -p dist-flat
-          rsync -av --remove-source-files --exclude='node_modules/' dist/ dist-flat/
-          rm -rf dist
-          mv dist-flat dist
-
-          # Verify final output
           ls -la dist
           du -sh dist
 
@@ -57,7 +42,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: github-pages
-          path: dist
+          path: |
+            dist/**
+            !**/node_modules
           retention-days: 1
 
   deploy:
