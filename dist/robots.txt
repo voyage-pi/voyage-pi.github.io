@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://voyage-pi.github.io/sitemap-index.xml
