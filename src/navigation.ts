@@ -14,7 +14,7 @@ export const headerData = {
       text: 'Meetings',
       href: '/meetings',
     },
-    
+
   ],
   actions: [{ text: ' GitHub', href: 'https://github.com/voyage-pi/voyage-pi.github.io', target: '_blank', icon: 'tabler:brand-github' },
             { text: 'Google Drive', href: 'https://drive.google.com/drive/folders/158ntRnDcMAbc8rKsSLTjUmcLhjGvtPnE?usp=sharing', target: '_blank', icon: 'tabler:brand-google-drive' },
@@ -29,7 +29,7 @@ export const footerData = {
       links: [
         { text: 'GitHub', href: 'https://github.com/voyage-pi' },
         { text: 'Google Drive', href: 'https://drive.google.com/drive/folders/158ntRnDcMAbc8rKsSLTjUmcLhjGvtPnE?usp=sharing' },
-        { text: 'Jira', href: 'https://voyage-pi.atlassian.net/jira/software/projects/VOYAGEPI/summary' },
+        { text: 'Jira', href: 'https://voyage-pi.atlassian.net/jira/software/projects/VOYAGE/summary' },
       ],
     },
     {
