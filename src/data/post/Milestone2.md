@@ -2,7 +2,7 @@
 publishDate: 2025-03-10T09:00:00Z
 title: Milestone 2
 excerpt: Elaboration Phase - Presentation of Personas, Use Cases, Class Diagram, and Architecture.
-image: "https://raw.githubusercontent.com/voyage-pi/voyage-pi.github.io/c4278f2b27534f122aa9abbced8a022ee96f1941/src/assets/images/Mls1.png"
+image: "https://raw.githubusercontent.com/voyage-pi/voyage-pi.github.io/main/src/assets/images/M2.png"
 ---
 
 ### Useful Links:
