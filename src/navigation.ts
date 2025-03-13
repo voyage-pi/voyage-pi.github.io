@@ -14,6 +14,10 @@ export const headerData = {
       text: 'Meetings',
       href: '/meetings',
     },
+    {
+      text: 'Guidelines',
+      href: '/contribution',
+    },
 
   ],
   actions: [{ text: ' GitHub', href: 'https://github.com/voyage-pi/voyage-pi.github.io', target: '_blank', icon: 'tabler:brand-github' },
