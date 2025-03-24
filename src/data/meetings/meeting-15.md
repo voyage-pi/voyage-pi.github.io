@@ -8,7 +8,7 @@ date: 2025-03-10
 
 📍 Place / Platform: Second Floor - Above AETTUA  
 
-## 👥 Participants  
+👥 Participants  
 
 - Daniel Ferreira  
 - Guilherme Rosa  
