@@ -56,8 +56,14 @@ date: 2025-04-07
 - **Teixeira**: Problem, Main Features, State of the Art (SoA), Requirements  
 - **Guilherme**: Use Case, Demo, Architecture, Workflow with Videos  
 - **Freitas**: M3 Workplan, Known Issues, What We Learned, M4 Workplan, M4 Backlog  
-- **Roldão**: Prepare **slides** and **presentation notes**  
+- **Roldão**: Prepare **slides** and **presentation notes** 
+
+### **Presentation Review by Daniel**
+- Slide 1 - Explain what is application in one simple phrase
+- Non functional - Did well to remove
+- Slide 8 - Put user service, but greyed out | Have to explain the LLM existence as soon as it appears
+- Remove slide about known issues
 
 ---
 
-📅 **Next Meeting:** 08/04/2025 | **18:00 - 19:00** 
+📅 **Next Meeting:** 10/04/2025 | **18:30 - 19:30** 
