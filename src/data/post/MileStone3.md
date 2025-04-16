@@ -8,16 +8,8 @@ image: "https://raw.githubusercontent.com/voyage-pi/voyage-pi.github.io/main/src
 - [Deployed Site](http://www.voyage-pi.com)
 - [Presentation](https://drive.google.com/file/d/14MX6Hoafjy8z51XecVFRdiTjOh3L54tn/view?usp=drive_link)
 
-## 🧩 Problem Statement
 
-### Lack of Local Knowledge
-Travelers often find it difficult to plan personalized trips due to unfamiliarity with local options.
-
-### Overwhelming Choices
-The sheer volume of online content creates decision fatigue and impairs efficient planning.
-
-
-## 🧑‍💻 Use Case
+## 🧑‍💻 Implemented Use Case
 This milestone main use case was to enable a guest user as a single individual person to create a a trip type of "Place", which, allows the user to choose a certain location to travel or visit for a days interval, with still an itinerary related to a set of preferences filled by the user.
 
 ## 🏛️ Architecture
@@ -96,11 +88,16 @@ This milestone main use case was to enable a guest user as a single individual p
 - LLM integration for activity scheduling
 
 
-## 🧠 Road Blocks & Learnt Stuff 
+## 🧠 Road Blocks & Learning Process 
 - Deployment & environment configuration
 - Managing modular services
 - Integrating external APIs effectively
 
+## Future Work (M4)
+- Emplementation of Group Preferences
+- Editing Itinerary feature
+- User oriented features (Sign In, Sign Up, add friends to trip .etc)
+- Realtime editing group itinerary feature
 
 
 
