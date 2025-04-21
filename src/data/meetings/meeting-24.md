@@ -4,7 +4,7 @@ id: 24
 date: 2025-04-10
 ---
 
-📅 Date: 04/04/2025  
+📅 Date: 10/04/2025  
 
 📍 Place / Platform: IETTA  
 

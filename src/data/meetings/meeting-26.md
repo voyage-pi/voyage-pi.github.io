@@ -1,10 +1,10 @@
 ---
 title: 📝 Meeting 26
 id: 26
-date: 2025-04-14
+date: 2025-04-15
 ---
 
-📅 Date: 04/04/2025  
+📅 Date: 15/04/2025  
 
 📍 Place / Platform: Above AETTUA  
 
