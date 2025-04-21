@@ -4,7 +4,7 @@ id: 25
 date: 2025-04-14
 ---
 
-📅 Date: 04/04/2025  
+📅 Date: 14/04/2025  
 
 📍 Place / Platform: Maker  
 
