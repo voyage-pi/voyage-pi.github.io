@@ -20,6 +20,7 @@ date: 2025-04-21
 
 ## 1. 🎯 Meeting Objective  
 - **Daily StandUp**
+- **Discussion**
 
 ## 2. 💬 Discussion and Decisions 
 ### Daily StandUp
@@ -66,4 +67,4 @@ date: 2025-04-21
 
 ---
 
-📅 **Next Meeting:** 23/04/2025 | **14:30 - 15:30**  
+📅 **Next Meeting:** 24/04/2025 | **18:00 - 19:00**  
