@@ -14,16 +14,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Install Playwright
-        run: |
-          npx playwright install
       - name: Checkout
         uses: actions/checkout@v4
       - name: install
         uses: withastro/action@v3
         with:
           path: .
-          node-version: 23
+          node-version: 20
+      - name: Install Playwright Browsers
+        run: npx playwright@1.51.0 install
 
   deploy:
     needs: build
