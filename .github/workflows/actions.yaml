@@ -14,10 +14,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Install Playwright
-        run: |
-          npm install -D @playwright/test
-          npx playwright install
       - name: Checkout
         uses: actions/checkout@v4
       - name: install
@@ -25,6 +21,11 @@ jobs:
         with:
           path: .
           node-version: 23
+      - name: Install Playwright
+        run: |
+          npm install -D @playwright/test
+          npx playwright install chromium
+          npx playwright install-deps chromium
 
   deploy:
     needs: build
