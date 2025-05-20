@@ -49,4 +49,4 @@ date: 2025-05-17
 - Discussed how to do question, questionary, and user preferences
 
 ---
-📅 **Next Meeting:** 15/05/2025 | **18:00 - 19:00**  
+📅 **Next Meeting:** 20/05/2025 | **18:00 - 19:00**  
