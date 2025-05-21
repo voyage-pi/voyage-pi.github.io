@@ -1,5 +1,3 @@
-![Project Calendar](./calendar-0.svg)
-
 ```mermaid
 %%{
   init: {
