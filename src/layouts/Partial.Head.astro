@@ -1,0 +1,49 @@
+---
+import { SITE } from '@src/config';
+import { getAsset } from '@src/utils/permalinks';
+
+const { title, description, image } = Astro.props;
+---
+
+<!-- Basic -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="icon" href={getAsset('/favicon.ico')} />
+
+<!-- Canonical URL -->
+<link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+
+<!-- Primary Meta Tags -->
+<title>{title ? `${title} | ${SITE.name}` : SITE.name}</title>
+<meta name="title" content={title ? `${title} | ${SITE.name}` : SITE.name} />
+<meta name="description" content={description || SITE.description} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={new URL(Astro.url.pathname, Astro.site)} />
+<meta property="og:title" content={title ? `${title} | ${SITE.name}` : SITE.name} />
+<meta property="og:description" content={description || SITE.description} />
+<meta property="og:image" content={image || getAsset('/images/og.jpg')} />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={new URL(Astro.url.pathname, Astro.site)} />
+<meta property="twitter:title" content={title ? `${title} | ${SITE.name}` : SITE.name} />
+<meta property="twitter:description" content={description || SITE.description} />
+<meta property="twitter:image" content={image || getAsset('/images/og.jpg')} />
+
+<!-- Mermaid -->
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'base',
+    themeVariables: {
+      primaryColor: '#fe385c',
+      primaryTextColor: '#000',
+      primaryBorderColor: '#FFF',
+      tertiaryColor: '#fff',
+    },
+  });
+</script>
+
