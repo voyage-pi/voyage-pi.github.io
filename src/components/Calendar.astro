@@ -62,4 +62,29 @@ gantt
     Technical report           :trans4, 2025-05-20, 2025-06-03`;
 ---
 
-<div class="mermaid" set:html={mermaidCode}></div> 
+<div class="mermaid" id="calendar-mermaid" set:html={mermaidCode}></div>
+
+<!-- Fallback script for this specific component -->
+<script>
+  // Fallback to ensure this specific Mermaid diagram renders
+  function ensureMermaidRender() {
+    const element = document.getElementById('calendar-mermaid');
+    if (element && element.textContent && element.textContent.includes('%%{')) {
+      // Still showing raw text, need to re-render
+      if (window['mermaid']) {
+        try {
+          window['mermaid'].run();
+        } catch (error) {
+          console.log('Retrying Mermaid render...', error);
+          setTimeout(ensureMermaidRender, 1000);
+        }
+      } else {
+        // Mermaid not loaded yet, wait and retry
+        setTimeout(ensureMermaidRender, 1000);
+      }
+    }
+  }
+  
+  // Check after a short delay
+  setTimeout(ensureMermaidRender, 2000);
+</script> 
