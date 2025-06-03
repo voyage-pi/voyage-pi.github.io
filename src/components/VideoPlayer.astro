@@ -10,25 +10,61 @@ export interface Props {
 const { 
   url, 
   width = "100%", 
-  height = "",
+  height = "500px",
   playing = true,
   controls = true 
 } = Astro.props;
+
+// Function to detect and convert Google Drive URLs
+function processVideoUrl(url: string) {
+  // Check if it's a Google Drive URL
+  if (url.includes('drive.google.com')) {
+    // Extract file ID from Google Drive URL
+    const fileIdMatch = url.match(/\/file\/d\/([a-zA-Z0-9_-]+)/);
+    if (fileIdMatch) {
+      const fileId = fileIdMatch[1];
+      return {
+        isGoogleDrive: true,
+        embedUrl: `https://drive.google.com/file/d/${fileId}/preview`,
+        directUrl: `https://drive.google.com/uc?id=${fileId}&export=download`
+      };
+    }
+  }
+  
+  return {
+    isGoogleDrive: false,
+    embedUrl: url,
+    directUrl: url
+  };
+}
+
+const videoInfo = processVideoUrl(url);
 ---
 
-<div class="video-player-container" style={`width: ${width}; height: ${height};`}>
-  <video 
-    controls={controls}
-    autoplay={playing}
-    style="width: 100%; height: 100%; object-fit: contain; "
-  >
-    <source src={url} type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
+<div class="video-player-container" style={`width: ${width}; height: ${height || '400px'};`}>
+  {videoInfo.isGoogleDrive ? (
+    <iframe 
+      src={videoInfo.embedUrl}
+      style="width: 100%; height: 100%; border: none;"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+    ></iframe>
+  ) : (
+    <video 
+      controls={controls}
+      autoplay={playing}
+      style="width: 100%; height: 100%; object-fit: contain;"
+    >
+      <source src={videoInfo.directUrl} type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  )}
 </div>
 
 <style>
   .video-player-container {
     overflow: hidden;
+    border-radius: 8px;
+    background: #000;
   }
 </style> 
