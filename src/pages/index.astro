@@ -1,0 +1,80 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Features from '~/components/widgets/Features.astro';
+import BlogOldestPosts from '~/components/widgets/BlogOldestPosts.astro';
+import Team from '~/components/widgets/Team.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+
+const metadata = {
+  title: 'Voyage',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+
+  <Hero2
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Learn more',
+        href: '#SBVTP',
+      },
+    ]}
+    image={{ src: '~/assets/images/Trip-cuate.svg', alt: 'AstroWind Hero Image' }}
+  >
+    <Fragment slot="title">
+    A Trip made for<span class="text-primary highlight"> You</span><br/>Where Your Taste Shapes the <span class="text-primary highlight"> Journey</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+    Because your taste deserves more than generic recommendations
+    </Fragment>
+  </Hero2>
+  <div id="SBVTP">
+            <h1
+              class="mx-auto text-center my-16 text-5xl  md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
+              >Say <span class="bg-gradient-to-r from-secondary via-primary to-secondary py-10 bg-clip-text text-transparent">Bon Voyage to </span> Planning</h1>
+  </div>
+
+
+  <Features
+    id="features"
+    title="Features"
+    items={[
+      {
+        title: 'Itinerary creation',
+        // description:"",
+        icon: 'tabler:map',
+      },
+      {
+        title: 'Tailored recommendations',
+        // description: "",
+        icon: 'tabler:user',
+      },
+      {
+        title: 'Simplified trip budgeting',
+        // description:"",
+        icon: 'tabler:currency-dollar',
+      },
+      {
+        title: 'Personal travel history',
+        // description:"",
+        icon: 'tabler:history',
+      }
+    ]}
+  />
+
+  <Team
+      title="Team"
+  />
+
+
+  <BlogOldestPosts
+    title="Milestones"
+  />
+
+
+</Layout>

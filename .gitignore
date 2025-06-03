@@ -22,3 +22,11 @@ pnpm-debug.log*
 pnpm-lock.yaml
 
 .astro
+
+# Large media files (use Git LFS or external hosting instead)
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+public/videos/

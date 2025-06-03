@@ -1,0 +1,87 @@
+---
+import RuiImg from "../../assets/images/rui.png";
+import GuiImg from "../../assets/images/gui.png";
+import RicImg from "../../assets/images/ric.png";
+import FreitasImg from "../../assets/images/freitas.png";
+import RoldaoImg from "../../assets/images/roldao.png";
+
+interface TeamMember {
+    name: string;
+    image: ImageMetadata;
+    gradientClass: string;
+  }
+  
+  const team: TeamMember[] = [
+    {
+      name: "Guilherme Rosa",
+      image: GuiImg,
+      gradientClass: "bg-gradient-to-t from-[#d91e48] to-rose-200"
+    },
+    {
+      name: "Henrique Freitas",
+      image: FreitasImg,
+      gradientClass: "bg-gradient-to-t from-[#d91e48] to-rose-200"
+    },
+    {
+      name: "Henrique Teixeira",
+      image: RicImg,
+      gradientClass: "bg-gradient-to-t from-[#d91e48] to-rose-200"
+    },
+    {
+      name: "João Roldão",
+      image: RoldaoImg,
+      gradientClass: "bg-gradient-to-t from-[#d91e48] to-rose-200"
+    },
+    {
+      name: "Rui Machado",
+      image: RuiImg,
+      gradientClass: "bg-gradient-to-t from-[#d91e48] to-rose-200"
+    }
+  ];
+
+const {
+  title = "Team", 
+  information = await Astro.slots.render('information'),
+  id,
+  isDark = false,
+  classes = {},
+  bg = await Astro.slots.render('bg'),
+} = Astro.props;
+---
+<section class="py-16 px-8 max-w-7xl mx-auto">
+  {title && (
+    <h1 class="text-4xl font-bold  mb-8" set:html={title} />
+  )}
+
+  {information && <p class="text-center text-gray-600 mb-12" set:html={information} />}
+
+  <div class="grid grid-cols sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-8">
+    {team.map((member) => (
+      <div class="relative group">
+        <div class={`relative overflow-hidden rounded-md aspect-[5/6] bg-gradient-to-br ${member.gradientClass}`}>
+          <img
+            src={member.image.src}
+            alt={`${member.name}`}
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="bg-white rounded-2xl p-3 mt-[-2rem] mx-4 relative text-center shadow-md">
+          <h3 class="text-md font-medium text-gray-900 mb-1">
+            {member.name}
+          </h3>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .group:hover img {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  img {
+    transition: transform 0.3s ease-in-out;
+  }
+</style>

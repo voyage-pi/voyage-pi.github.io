@@ -1,0 +1,63 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+const {title} = Astro.props;
+---
+<Layout>
+  <div class="text-center max-w-5xl mx-auto">
+    <h1
+    class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
+    set:html={title}
+  />
+    </div>
+    <div id="wrapper" class="text-center justify-center p-8">
+      <slot/>
+    </div>
+</Layout>
+
+<!-- Mermaid -->
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  
+  // Function to initialize Mermaid with retry logic
+  function initializeMermaid() {
+    try {
+      mermaid.initialize({
+        startOnLoad: false, // Don't start automatically
+        theme: 'base',
+        themeVariables: {
+          primaryColor: '#fe385c',
+          primaryTextColor: '#000',
+          primaryBorderColor: '#FFF',
+          tertiaryColor: '#fff',
+        },
+      });
+      
+      // Force render after initialization
+      const renderMermaid = () => {
+        const mermaidElements = document.querySelectorAll('.mermaid');
+        if (mermaidElements.length > 0) {
+          mermaid.run();
+        } else {
+          // Retry if elements not found yet
+          setTimeout(renderMermaid, 100);
+        }
+      };
+      
+      renderMermaid();
+    } catch (error) {
+      console.error('Mermaid initialization error:', error);
+      // Retry after a short delay
+      setTimeout(initializeMermaid, 500);
+    }
+  }
+  
+  // Initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeMermaid);
+  } else {
+    initializeMermaid();
+  }
+  
+  // Also handle page transitions in Astro
+  document.addEventListener('astro:page-load', initializeMermaid);
+</script>

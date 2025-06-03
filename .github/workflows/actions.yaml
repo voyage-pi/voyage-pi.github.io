@@ -16,6 +16,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+<<<<<<< HEAD
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -46,6 +47,15 @@ jobs:
             dist/**
             !**/node_modules
           retention-days: 1
+=======
+      - name: install
+        uses: withastro/action@v3
+        with:
+          path: .
+          node-version: 20
+      - name: Install Playwright Browsers
+        run: npx playwright@1.51.0 install chromium
+>>>>>>> main
 
   deploy:
     needs: build
