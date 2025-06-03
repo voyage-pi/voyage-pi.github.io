@@ -1,0 +1,34 @@
+---
+export interface Props {
+  url: string;
+  width?: string;
+  height?: string;
+  playing?: boolean;
+  controls?: boolean;
+}
+
+const { 
+  url, 
+  width = "100%", 
+  height = "",
+  playing = true,
+  controls = true 
+} = Astro.props;
+---
+
+<div class="video-player-container" style={`width: ${width}; height: ${height};`}>
+  <video 
+    controls={controls}
+    autoplay={playing}
+    style="width: 100%; height: 100%; object-fit: contain; "
+  >
+    <source src={url} type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+<style>
+  .video-player-container {
+    overflow: hidden;
+  }
+</style> 
