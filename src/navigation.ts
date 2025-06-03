@@ -13,12 +13,7 @@ export const headerData = {
     {
       text: 'Meetings',
       href: '/meetings',
-    },
-    {
-      text: 'Guidelines',
-      href: '/contribution',
-    },
-
+    }
   ],
   actions: [{ text: ' GitHub', href: 'https://github.com/voyage-pi/voyage-pi.github.io', target: '_blank', icon: 'tabler:brand-github' },
             { text: 'Google Drive', href: 'https://drive.google.com/drive/folders/158ntRnDcMAbc8rKsSLTjUmcLhjGvtPnE?usp=sharing', target: '_blank', icon: 'tabler:brand-google-drive' },
