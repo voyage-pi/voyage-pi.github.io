@@ -32,18 +32,3 @@ const { title, description, image } = Astro.props;
 <meta property="twitter:description" content={description || SITE.description} />
 <meta property="twitter:image" content={image || getAsset('/images/og.jpg')} />
 
-<!-- Mermaid -->
-<script type="module">
-  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-  mermaid.initialize({
-    startOnLoad: true,
-    theme: 'base',
-    themeVariables: {
-      primaryColor: '#fe385c',
-      primaryTextColor: '#000',
-      primaryBorderColor: '#FFF',
-      tertiaryColor: '#fff',
-    },
-  });
-</script>
-

@@ -66,25 +66,41 @@ gantt
 
 <!-- Fallback script for this specific component -->
 <script>
-  // Fallback to ensure this specific Mermaid diagram renders
-  function ensureMermaidRender() {
+  function ensureCalendarMermaidRender() {
     const element = document.getElementById('calendar-mermaid');
-    if (element && element.textContent && element.textContent.includes('%%{')) {
+    if (!element) {
+      setTimeout(ensureCalendarMermaidRender, 500);
+      return;
+    }
+    
+    // Check if the element contains raw Mermaid code
+    if (element.textContent && element.textContent.includes('%%{')) {
       // Still showing raw text, need to re-render
       if (window['mermaid']) {
         try {
+          // Clear the element first
+          element.innerHTML = element.textContent;
           window['mermaid'].run();
         } catch (error) {
-          console.log('Retrying Mermaid render...', error);
-          setTimeout(ensureMermaidRender, 1000);
+          console.log('Retrying Calendar Mermaid render...', error);
+          setTimeout(ensureCalendarMermaidRender, 1000);
         }
       } else {
         // Mermaid not loaded yet, wait and retry
-        setTimeout(ensureMermaidRender, 1000);
+        setTimeout(ensureCalendarMermaidRender, 1000);
       }
     }
   }
   
-  // Check after a short delay
-  setTimeout(ensureMermaidRender, 2000);
+  // Multiple event listeners to catch different loading scenarios
+  document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(ensureCalendarMermaidRender, 1000);
+  });
+  
+  document.addEventListener('astro:page-load', () => {
+    setTimeout(ensureCalendarMermaidRender, 1000);
+  });
+  
+  // Fallback timeout
+  setTimeout(ensureCalendarMermaidRender, 3000);
 </script> 
